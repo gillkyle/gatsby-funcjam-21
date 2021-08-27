@@ -112,9 +112,9 @@ const IndexPage = ({ data }) => {
           />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-white mb-1">Goals</h1>
+          <h1 className="text-3xl font-bold text-white mb-1">Goal Tracker</h1>
           <div className="flex space-x-2 items-center text-white text-xs mb-1 italic ">
-            "...by small and simple things are great things brought to pass"
+            Rebuilt and updated via Incremental Cloud Builds from Airtable
           </div>
           <div className="flex space-x-2 items-center">
             <Fingerprint className="fill-current text-orange-400 h-5" />
@@ -223,7 +223,7 @@ const IndexPage = ({ data }) => {
         {/* TEMPLE GOAL */}
         <Goal
           name="Temple or family history"
-          subtitle="Go to the temple or do an hour of family history research, once weekly."
+          subtitle="Attend the temple and meditate or do an hour of family history research, once weekly."
           dates={temple.dates}
         />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-4 mt-4 mb-8 max-w-3xl">
@@ -243,7 +243,7 @@ const IndexPage = ({ data }) => {
         </div>
         {/* WAKE UP GOAL */}
         <Goal
-          name="Get up at 6:30am"
+          name="Get up at 7:00am"
           subtitle="Every day from M-F, weekend success criteria is 7+ hours of sleep."
           dates={wake.dates}
         />
@@ -267,6 +267,10 @@ const IndexPage = ({ data }) => {
             }
             isPercentage
           />
+        </div>
+        <div>
+          All tables are updated from an iOS shortcut that POSTs to my endpoint
+          with my passphrase.
         </div>
       </section>
       <ReactTooltip
