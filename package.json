@@ -1,9 +1,9 @@
 {
-  "name": "form",
+  "name": "goals",
   "version": "1.0.0",
   "private": true,
-  "description": "form",
-  "author": "Kyle Mathews",
+  "description": "goals",
+  "author": "Kyle Gill",
   "keywords": [
     "gatsby"
   ],
@@ -15,9 +15,24 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "date-fns": "^2.23.0",
     "gatsby": "next",
+    "gatsby-plugin-image": "^1.12.0",
+    "gatsby-plugin-manifest": "^3.12.0",
+    "gatsby-plugin-postcss": "^4.12.0",
+    "gatsby-plugin-react-helmet": "^4.12.0",
+    "gatsby-plugin-sharp": "^3.12.0",
+    "gatsby-source-airtable": "^2.2.1",
+    "gatsby-source-filesystem": "^3.12.0",
+    "gatsby-transformer-sharp": "^3.12.0",
+    "postcss": "^8.3.6",
     "react": "^17.0.1",
+    "react-calendar-heatmap": "^1.8.1",
     "react-dom": "^17.0.1",
-    "react-hook-form": "^7.5.2"
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.5.2",
+    "react-tooltip": "^4.2.21",
+    "tailwindcss": "^2.2.7"
   }
 }
