@@ -271,6 +271,7 @@ const IndexPage = ({ data }) => {
         <div>
           All tables are updated from{" "}
           <a
+            className="text-blue-500"
             href="https://kylegill.com/essays/programming-a-better-life/#a-personal-goal-tracking-app"
             target="_blank"
             rel="noopener noreferrer"
