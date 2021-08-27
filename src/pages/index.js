@@ -269,8 +269,15 @@ const IndexPage = ({ data }) => {
           />
         </div>
         <div>
-          All tables are updated from an iOS shortcut that POSTs to my endpoint
-          with my passphrase.
+          All tables are updated from{" "}
+          <a
+            href="https://kylegill.com/essays/programming-a-better-life/#a-personal-goal-tracking-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            an iOS shortcut
+          </a>{" "}
+          that POSTs to my endpoint with my passphrase.
         </div>
       </section>
       <ReactTooltip
