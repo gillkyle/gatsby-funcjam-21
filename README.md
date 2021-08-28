@@ -1,37 +1,42 @@
+![Goal Tracker dashboard](https://raw.githubusercontent.com/gillkyle/images/master/CleanShot%202021-08-27%20at%2020.08.50%402x.png)
 
-# Gatsby FuncJam '21
+# Goal Tracker (Gatsby FuncJam '21)
 
-This example shows how to build a form with [react-hook-form](https://react-hook-form.com/) that submits to a Gatsby Function.
+This app relies on Gatsby functions to track goals, using airtable as a database, and a custom UI with some beautiful data viz components built with Tailwind.
 
-1.  **Start developing.**
+## Installation
 
-    To get started clone this repo locally and run `npm install` to add all necessary packages.
+To start the site:
 
-    ```shell
-    cd examples/functions-basic-form
-    npm install
-    npm run develop
-    ```
+- duplicate the Airtable base for the goal tracker using the [copy base link](https://airtable.com/addBaseFromShare/shrUpUS4fnwJInCVn?utm_source=airtable_shared_application)
+- clone this repo: `git clone https://github.com/gillkyle/gatsby-funcjam-21` (or using the ssh link)
+- change directories/folders: `cd gatsby-funcjam-21`
+- copy the `.env.example` file into your own `.env`: `cp .env.example .env`
+- add in the airtable key and app id from your own version of the airtable base
+- run: `npm install` or `yarn` to add all necessary packages
+- run: `npm start` or `yarn start` to boot up the site
 
-2.  **Open the code and start customizing!**
+To test a function:
 
-    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/form
+- send a POST request to the `/api/airtable` endpoint with some required fields in the body:
 
-    Try editing the function in `src/api/form.ts` or form at `src/pages/index.js`
+```shell
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"date":"2021-08-28","baseName":"Journal","status":"Done","password":"somepassphrase"}' \
+  http://localhost:8000/api/airtable
+```
 
-3.  **Deploy**
+This will save a new row in the Journal base, with a status of Done.
 
-You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
+## Read about how and why this was made
 
+I wrote a blog post about why I wanted a tool like this, and why I love being able to build them myself. You can read it here:
+
+[https://kylegill.com/essays/programming-a-better-life#a-personal-goal-tracking-app](https://kylegill.com/essays/programming-a-better-life#a-personal-goal-tracking-app)
 
 ## Submission Checklist
 
-- [ ] Add installation documentation to the README
-- [ ] Update the `/api` folder with your function
-- [ ] Submit your theme at https://gatsbyjs.com/func-jam-21/
-
-## Helpful Links
-
-Read the Gatsby [functions docs](https://www.gatsbyjs.com/docs/reference/functions/).
-Check out this video all about Gatsby functions 
-Take a look at the Functions Use Cases over [here](https://www.gatsbyjs.com/products/cloud/functions/). 
+- [x] Add installation documentation to the README
+- [x] Update the `/api` folder with your function
+- [x] Submit your entry at https://gatsbyjs.com/func-jam-21/
