@@ -4,6 +4,8 @@
 
 This app relies on Gatsby functions to track goals, using airtable as a database, and a custom UI with some beautiful data viz components built with Tailwind.
 
+[View it live](https://gatsbyfuncjam21.gatsbyjs.io/)
+
 ## Installation
 
 To start the site:
